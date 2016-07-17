@@ -1,8 +1,8 @@
 language: csharp
-solution: src/CodeLight.Server.sln
+solution: src/CodeLight.Server/CodeLight.Server.sln
 install:
-  - nuget restore src/CodeLight.Server.sln
+  - nuget restore src/CodeLight.Server/CodeLight.Server.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release src/CodeLight.Server.sln
+  - xbuild /p:Configuration=Release src/CodeLight.Server/CodeLight.Server.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./test/CodeLightr.Server.Test/bin/Release/CodeLightr.Server.Tests.dll
