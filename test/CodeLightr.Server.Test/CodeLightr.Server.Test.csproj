@@ -70,7 +70,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CodeLightr.Server.csproj">
+    <ProjectReference Include="..\..\src\CodeLightr.Server\CodeLightr.Server.csproj">
       <Project>{6E749598-C569-4A5D-BCBA-49954D47D2FC}</Project>
       <Name>CodeLightr.Server</Name>
     </ProjectReference>
