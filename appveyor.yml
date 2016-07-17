@@ -6,4 +6,4 @@ test:
     - '**/*.test.dll'
 
 before_build:
-  - nuget restore
+  - nuget restore src/CodeLightr.Server/CodeLightr.Server.sln
