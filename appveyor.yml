@@ -1,3 +1,5 @@
+version: 0.0.{build}
+
 build:
   project: src/CodeLightr.Server/CodeLightr.Server.sln
 
@@ -7,3 +9,10 @@ test:
 
 before_build:
   - nuget restore src/CodeLightr.Server/CodeLightr.Server.sln
+
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: jUFvOcYHheaCGCD5hnDKC39zBkzOiV3vUPJv4cBW5MmXTCVttxN7vFBvPWdWENei
+
+after_test:
+  - cmd: .\afterTests.cmd

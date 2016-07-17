@@ -62,8 +62,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ObservableMiddleware.cs" />
-    <Compile Include="OwinServerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\OwinServerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -74,6 +74,9 @@
       <Project>{6E749598-C569-4A5D-BCBA-49954D47D2FC}</Project>
       <Name>CodeLightr.Server</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Integration\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

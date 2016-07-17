@@ -1,12 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Text;
+using System;
 using System.Threading.Tasks;
 using Moq;
 using NUnit.Framework;
 using Owin;
 
-namespace CodeLightr.Server.Test
+namespace CodeLightr.Server.Test.Unit
 {
     [TestFixture]
     public class OwinServerTests
