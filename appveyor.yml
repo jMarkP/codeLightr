@@ -3,7 +3,7 @@ build:
 
 test:
   assemblies:
-    - '**/*.test.dll''
+    - '**/*.test.dll'
 
 before_build:
   - nuget restore
