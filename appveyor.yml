@@ -1,0 +1,9 @@
+build:
+	project: src/CodeLightr.Server/CodeLightr.Server.sln
+
+test:
+	assemblies:
+		- '**/*.test.dll''
+
+before_build:
+  - nuget restore
