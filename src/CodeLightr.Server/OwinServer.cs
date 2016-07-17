@@ -10,7 +10,7 @@ using Owin;
 
 namespace CodeLightr.Server
 {
-    internal interface IOwinServer
+    public interface IOwinServer
     {
         void Run(string url, Action<IAppBuilder> configure);
         void Stop();

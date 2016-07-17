@@ -8,12 +8,12 @@ using log4net;
 
 namespace CodeLightr.Server
 {
-    internal interface IConsoleControlHandler
+    public interface IConsoleControlHandler
     {
         void Subscribe(Action handler, params ConsoleControlHandler.CtrlTypes[] ctrlTypes);
     }
 
-    internal class ConsoleControlHandler : IConsoleControlHandler
+    public class ConsoleControlHandler : IConsoleControlHandler
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof (ConsoleControlHandler));
         private Dictionary<CtrlTypes, List<Action>> handlers = new Dictionary<CtrlTypes, List<Action>>();
