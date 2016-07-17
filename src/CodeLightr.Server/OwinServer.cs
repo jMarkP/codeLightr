@@ -10,7 +10,13 @@ using Owin;
 
 namespace CodeLightr.Server
 {
-    internal class OwinServer
+    internal interface IOwinServer
+    {
+        void Run(string url, Action<IAppBuilder> configure);
+        void Stop();
+    }
+
+    internal class OwinServer : IOwinServer
     {
         private readonly IWepAppWrapper webApp;
         private static readonly ILog Log = LogManager.GetLogger(typeof (OwinServer));

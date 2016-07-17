@@ -87,6 +87,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeLightrWebServer.cs" />
+    <Compile Include="ConsoleControlHandler.cs" />
     <Compile Include="IWepAppWrapper.cs" />
     <Compile Include="OwinServer.cs" />
     <Compile Include="Program.cs" />
