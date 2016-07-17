@@ -12,12 +12,18 @@ namespace CodeLightr.Server
 {
     internal class OwinServer
     {
+        private readonly IWepAppWrapper webApp;
         private static readonly ILog Log = LogManager.GetLogger(typeof (OwinServer));
         private readonly ManualResetEvent stopEvent = new ManualResetEvent(false);
 
+        public OwinServer(IWepAppWrapper webApp)
+        {
+            this.webApp = webApp;
+        }
+
         public void Run(string url, Action<IAppBuilder> configure)
         {
-            using (WebApp.Start(url, configure))
+            using (webApp.Start(url, configure))
             {
                 Log.InfoFormat("OWIN Server running at {0}", url);
                 stopEvent.WaitOne();
